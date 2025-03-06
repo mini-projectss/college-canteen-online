@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen | Order Your Food</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <header>
+            <img src="assests/images/logo.png" alt="Canteen Logo" class="logo">
+            <nav>
+                <a href="auth/user/login.html" class="nav-btn">Student</a>
+                <a href="auth/admin/login.html" class="nav-btn admin">Admin</a>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <h1 class="fade-in">Fresh & Delicious <span class="highlight">Food Awaits!</span> 🍕</h1>
+            <p class="fade-in">Order now and enjoy tasty meals at your college canteen.</p>
+            <a href="auth/user/login.html" class="btn pulse">Order Now</a>
+        </div>
+
+        <div class="food-images slide-up">
+            <div class="scroll-container">
+                <img src="assests/images/menu-items/burger.png" alt="Burger">
+                <img src="assests/images/menu-items/pizza.png" alt="Pizza">
+                <img src="assests/images/menu-items/drink.png" alt="Drink">
+            </div>
+        </div>
+    </section>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+/* 🔹 Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff5722;
+    padding: 10px 20px;
+    height: 55px;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* 🔹 Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+/* 🔹 Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 40px;
+    left: -20px;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.profile-dropdown:hover .dropdown {
+    display: block;
+}
+
+.profile-dropdown .dropdown li {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.profile-dropdown .dropdown li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.profile-dropdown .dropdown li:hover {
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+
+/* 🔹 Logout Button */
+#logout {
+    background: white;
+    color: #ff5722;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* 🔹 Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+}
+
+/* 🔹 Mobile Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background: #ff5722;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* 🔹 Cart Container */
+.cart-container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+/* 🔹 Cart Items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffecb3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.cart-item button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 🔹 Order Type */
+.order-type {
+    margin: 20px 0;
+}
+
+#scheduleTime {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+/* 🔹 Checkout Button */
+#checkout-btn {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cart-item div {
+    display: flex;
+    gap: 5px;
+}
+
+.cart-item button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background: #e64a19;
+}
